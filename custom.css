@@ -1,0 +1,69 @@
+/* Ecternal CSS
+can be used in multiple pages (highly re-usealbe) */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+       /* Using Element selector (html tags)(body, h2, p, etc) */
+
+        html{
+            /* default font size is 16px */
+            font-size: 15px;
+        }
+        body{
+            font-family: "Open Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            color: darkgreen;
+        }
+
+        h2{
+            color: red;
+            background-color: greenyellow;
+            text-align: center;
+        }
+        p{
+            font-size: 1.3rem;
+            font-style: italic;
+            line-height: 1.5;
+        }
+        img{
+            object-fit: cover;
+            object-position: center;
+            border-radius:50%;
+            border: 2px solid rgb(252, 250, 146);
+            padding: 1px;
+        }
+
+        /* Using Class Selector  */
+        .Ingredients-heading{
+            color: black;
+        }
+        .Instructions-heading{
+            color: blue;
+        }
+        h3.Instructions-heading{
+            color: brown;
+        }
+
+        /* ID Selector */
+        #Ingredients-heading{
+        color: orange;
+        }
+        /* Specifity : 
+        Id >> Class >> Element selector
+
+        h2{
+        0,0,1
+        }
+        .INstructions-heading{
+        0,1,0
+        }
+        h2.Instructions-heading{
+        0,1,1
+        }
+        #Ingredients-heading{
+        1,0,0
+        }
+        h2#Ingredients-heading{
+        1,0,1}
+        */

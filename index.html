@@ -4,56 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first HTML page 1</title>
-
-    <!-- INternal CSS -->
-     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-        html{
-            /* default font size is 16px */
-            font-size: 15px;
-        }
-        body{
-            font-family: "Open Sans", sans-serif;
-            font-optical-sizing: auto;
-            font-weight: 600;
-            font-style: normal;
-            color: darkgreen;
-        }
-
-        h2{
-            color: red;
-            background-color: greenyellow;
-            text-align: center;
-        }
-        p{
-            font-size: 1.3rem;
-            font-style: italic;
-            line-height: 1.5;
-        }
-        img{
-            object-fit: cover;
-            object-position: center;
-            border-radius:50%;
-            border: 2px solid rgb(252, 250, 146);
-            padding: 1px;
-        }
-       
-     </style>
+    <link rel="stylesheet" href="custom.css">
+    <!-- INternal CSS  are written here using style -->
 </head>
 <body>
     Hello World!!
     <h1>Chocolate Chip Cookie Recipe</h1>
-    <h2>Ingredients</h2>
+    <h2 id="Ingredients-heading" class="Ingredients-heading">Ingredients</h2>
     <h3>Dry Ingredients</h3>
     <h3>Wet Ingredients</h3>
-    <h2>Instructions</h2>
+    <h2 class="Instructions-heading">Instructions</h2>
     <h3>Step 1: Prepare the Dough</h3>
-    <h3>Step 2: Bake the Cookies</h3>
-    <h4>Chocolate Chip Cookie Recipe</h4>
-    <h4>Ingredients</h4>
+    <h3 class="Instructions-heading">Step 2: Bake the Cookies</h3>
+    <h4 class="Instructions-heading"> Chocolate Chip Cookie Recipe</h4>
+    <h4">Ingredients</h4>
     <h5>Dry Ingredients</h5>
     <h5>Wet Ingredients</h5>
-    <h2>Instructions</h2>
+    <h2 class="Instructions-heading">Instructions</h2>
     <h6>Step 1: Prepare the Dough</h6>
     <h6>Step 2: Bake the Cookies</h6>
 
