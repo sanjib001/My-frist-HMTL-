@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-box</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .item {
+            border: 4px solid black;
+            padding: 3px;
+            flex-basis: 20%;
+        }
+
+        .Container {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .Item {
+            border: 4px solid rgb(242, 238, 13);
+            background-color: rgb(193, 104, 9);
+            color: white;
+            padding: 5px 4px;
+            font-size: 18px;
+            flex-basis: 25%;
+
+        }
+
+        .Number {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between; 
+            align-items: center;
+        }
+        .t6{
+            align-self: flex-end;
+        }
+
+        /* .t1{
+            flex-grow: 2;
+        }
+        .t3{
+            flex-grow: 2;
+        }
+        .t5{
+            flex-grow: 4;
+        }
+        .t7{
+            flex-grow: 6;
+        }
+        .t2, .t4, .t6, .t8{
+            flex-grow: 1;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="Container">
+        <div class="item item1">Item 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ea quo in
+            consequuntur ratione. Maxime recusandae, impedit quidem voluptatibus velit aliquam aperiam et quis saepe
+            laudantium? Nobis beatae et maiores repudiandae nulla sit corrupti distinctio ullam iusto. Vel consectetur
+            beatae aspernatur dolor ullam? Porro numquam ut assumenda delectus officiis dolores?</div>
+        <div class="item item1">Item 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ea quo in
+            consequuntur ratione. Maxime recusandae, impedit quidem voluptatibus velit aliquam aperiam et quis saepe
+            laudantium? Nobis beatae et maiores repudiandae nulla sit corrupti distinctio ullam iusto. Vel consectetur
+            beatae aspernatur dolor ullam? Porro numquam ut assumenda delectus officiis dolores?</div>
+        <div class="item item1">Item 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ea quo in
+            consequuntur ratione. Maxime recusandae, impedit quidem voluptatibus velit aliquam aperiam et quis saepe
+            laudantium? Nobis beatae et maiores repudiandae nulla sit corrupti distinctio ullam iusto. Vel consectetur
+            beatae aspernatur dolor ullam? Porro numquam ut assumenda delectus officiis dolores?</div>
+        <div class="item item2">Item 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsam
+            eligendi,blanditiis aut quaerat nemo veritatis sunt modi placeat ullam deleniti perspiciatis, expedita nam
+            remofficiis distinctio culpa, quod iure ab illo exercitationem consequuntur incidunt cum! Nam, eaque.
+            Quasexplicabo minus ratione deserunt minima exercitationem libero ea nihil autem voluptatem.</div>
+        <div class="item item2">Item 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsam
+            eligendi,blanditiis aut quaerat nemo veritatis sunt modi placeat ullam deleniti perspiciatis, expedita nam
+            remofficiis distinctio culpa, quod iure ab illo exercitationem consequuntur incidunt cum! Nam, eaque.
+            Quasexplicabo minus ratione deserunt minima exercitationem libero ea nihil autem voluptatem.</div>
+        <div class="item item2">Item 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsam
+            eligendi,blanditiis aut quaerat nemo veritatis sunt modi placeat ullam deleniti perspiciatis, expedita nam
+            remofficiis distinctio culpa, quod iure ab illo exercitationem consequuntur incidunt cum! Nam, eaque.
+            Quasexplicabo minus ratione deserunt minima exercitationem libero ea nihil autem voluptatem.</div>
+        <div class="item item3">Item 3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius nihil
+            asperioresamet, sequi corporis recusandae harum tenetur quis cumque labore quos ratione praesentium nobis
+            repellateveniet quam ipsa maxime facilis dignissimos nemo facere id? Necessitatibus placeat id
+            pariaturreprehenderit numquam at harum, aperiam ipsam modi ea exercitationem! Modi, ea accusamus.</div>
+        <div class="item item3">Item 3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius nihil
+            asperioresamet, sequi corporis recusandae harum tenetur quis cumque labore quos ratione praesentium nobis
+            repellateveniet quam ipsa maxime facilis dignissimos nemo facere id? Necessitatibus placeat id
+            pariaturreprehenderit numquam at harum, aperiam ipsam modi ea exercitationem! Modi, ea accusamus.</div>
+        <div class="item item3">Item 3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius nihil
+            asperioresamet, sequi corporis recusandae harum tenetur quis cumque labore quos ratione praesentium nobis
+            repellateveniet quam ipsa maxime facilis dignissimos nemo facere id? Necessitatibus placeat id
+            pariaturreprehenderit numquam at harum, aperiam ipsam modi ea exercitationem! Modi, ea accusamus.</div>
+    </div>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <div class="Number">
+        <div class="Item t1">1</div>
+        <div class="Item t2">2</div>
+        <div class="Item t3">3</div>
+        <div class="Item t4">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores fugiat tenetur quidem eveniet, ratione incidunt!</div>
+        <div class="Item t5">5</div>
+        <div class="Item t6">6</div>
+        <div class="Item t7">7</div>
+        <div class="Item t8">8</div>
+    </div>
+</body>
+
+</html>
