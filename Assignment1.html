@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assigment-1</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        .topbar h1 {
+            font-size: 3rem;
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+        nav ul {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            display: flex;
+            gap: 20px;
+            background-color: #ccc;
+        }
+
+        main {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .features {
+            flex-grow: 3;
+            padding: 10px;
+            border: 1px solid #333;
+        }
+
+        .pricing-plans {
+            flex-grow: 5;
+            border: 1px solid #333;
+            padding: 10px;
+        }
+
+        .Pricings{
+            display: flex;
+            gap: 5px;
+            justify-content: space-between;
+        }
+        .basic{
+            flex-grow: 1;
+            margin:2px 10px;
+            border: 1px solid #333;
+        } 
+        .standard{
+            flex-grow: 1;
+            margin:2px 10px;
+            border: 1px solid #333;
+        }
+        .premium{
+            flex-grow: 1;
+            margin:2px 10px;
+            border: 1px solid #333;
+        }
+        .pricing-plans h3{
+            font-size: 1.8rem;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .testimonials {
+            border: 1px solid #333;
+            flex-grow: 3;
+            border: 1px solid #333;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="topbar">
+            <h1>Techaxis sample page</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Assignment1.html">Home</a>
+                </li>
+                <li>
+                    <a href="feature.html">Feature</a>
+                </li>
+                <li>
+                    <a href="Pricing.html">Pricing</a>
+                </li>
+                <li>
+                    <a href="testimoial">Testimonials</a>
+                </li>
+                <li>
+                    <a href="contact.htm" target="_blank">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="features">
+            <h2>Features</h2>
+            <div>
+                <h3>Feature 1 Heading</h3>
+                <p>This is a brief description of this feature.</p>
+                <ul>
+                    <li>Feature point 1</li>
+                    <li>Feature point 2</li>
+                    <li>Feature point 3</li>
+                </ul>
+            </div>
+            <div>
+                <h3>Feature 2 Heading</h3>
+                <p>This is a brief description of this feature.</p>
+                <ul>
+                    <li>Feature point 1</li>
+                    <li>Feature point 2</li>
+                    <li>Feature point 3</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pricing-plans">
+            <h2>Pricing plan</h2>
+            <div class="Pricings">
+                <div class="basic">
+                    <h3>Basic Plan</h3>
+                    <div class="dollor">$ 29</div>
+                    <ul>
+                        <li>Plan feature 1</li>
+                        <li>Plan feature 2</li>
+                        <li>Plan feature 3</li>
+                    </ul>
+                    <button class="sign-up" type="submit">Sign up</button>
+                </div>
+                <div class="standard">
+                    <h3>Standard Plan</h3>
+                    <div class="dollor">$ 49</div>
+                    <ul>
+                        <li>Plan feature 1</li>
+                        <li>Plan feature 2</li>
+                        <li>Plan feature 3</li>
+                    </ul>
+                    <button class="sign-up" type="submit">Sign up</button>
+                </div>
+                <div class="premium">
+                    <h3>Premium Plan</h3>
+                    <div class="dollor">$ 99</div>
+                    <ul>
+                        <li>Plan feature 1</li>
+                        <li>Plan feature 2</li>
+                        <li>Plan feature 3</li>
+                    </ul>
+                    <button class="sign-up" type="submit">Sign up</button>
+                </div>
+            </div>
+
+            <form action="get">
+                <h2>Contact us</h2>
+                <div><input type="text" name="Name" placeholder="Name"></div>
+                <div><input type="email" name="Email" placeholder="Email"></div>
+                <div><textarea name="Massage" placeholder="Massage" rows="3" cols="10"></textarea></textarea></div>
+                <button type="submit" class="submit">Submit</button>
+            </form>
+        </div>
+        <div class="testimonials">
+            <h2>Testimonials</h2>
+            <p>"This is the first testimonial."</p>
+            <p>- John Doe</p>
+            <p>"This is the second testimonial."</p>
+            <p>- john Dee</p>
+            <h2>Gallery</h2>
+            <div>
+                <img src="nature.jpeg" alt="picture of lake">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;Your Company, All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
