@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition & Animation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *,
+        *::before,
+        *::after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+        .navbar {
+            background-color: #fff;
+            padding: 10px;
+            margin: 20px;
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        .navbar nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            gap: 100px;
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .navbar nav ul li a:hover {
+            color: blue;
+        }
+
+        /* for transition */
+        .container {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: coral;
+        }
+
+        .box1:hover {
+            background-color: blue;
+            transform: translateX(400px);
+            /* transition: name-of-task(transform/background-color) time-of-trastition method(linear/ease-in-out) delay-time  */
+            transition: transform 1s ease-in-out 0s, background-color 1s 1s;
+        }
+
+        .navbar nav ul li a {
+            position: relative;
+        }
+
+        /* pseudo element -> before ( behave as element ) */
+        .navbar nav ul li a::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -10px;
+            background-color: blue;
+        }
+
+        .navbar nav ul li a:hover::before {
+            width: 100%;
+            transition: width 500ms ease-in-out 0s;
+        }
+
+        /* For animation */
+
+        .container-animation {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .boxa {
+            margin-top: 100px;
+            height: 100px;
+            width: 100px;
+            background-color: coral;
+        }
+
+        @keyframes moveboxleft {
+            0% {
+                transform: translateX(-50vw);
+            }
+
+            50% {
+                transform: translateX(50vw);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes moveboxright {
+            0% {
+                transform: translateX(100vw);
+            }
+
+            50% {
+                transform: translateX(-50vw);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .boxa1 {
+            animation: moveboxleft 4s infinite 500ms;
+        }
+
+        .boxa2 {
+            animation: moveboxright 4s infinite 500ms;
+        }
+
+        @keyframes scale {
+            0% {
+                transform: scale(0);
+            }
+
+            100% {
+                transform: scale(3);
+            }
+        }
+        .text {
+            font-size: 1.4rem;
+            text-align: center;
+            margin-top: 50px;
+            animation: scale 4s infinite 500ms;
+            color: coral;
+        }
+         @keyframes colorchange {
+            0% {
+                background-color: blue;
+            }
+            50% {
+                background-color: green;
+            }
+            100%{
+                background-color: yellow;
+            }
+        }
+        .box2{
+            animation: colorchange 4s 500ms;
+            animation-fill-mode: both; 
+            /* 3 types -> forwards, backwards and both */
+            animation-play-state: running;
+            /* 2 types -> pushed and running(used with js)*/
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Transition & Animation</h1>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="Completesite.html" target="_blank">Home</a></li>
+                    <li><a href="nature.jpeg" target="_blank">About</a></li>
+                    <li><a href="contact.html" target="_blank">Contact</a></li>
+                    <li><a href="contact.html" target="_blank">Complete site</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="box box1"> Box 1</div>
+            <div class="box box2"> Box 2</div>
+        </div>
+        <div class="container-animation">
+            <div class="boxa boxa1">
+                I will come from Left
+            </div>
+            <div class="boxa boxa2">
+                I will come from Right
+            </div>
+        </div>
+        <div class="text">Size increased uing scale keyframes</div>
+    </main>
+
+</body>
+
+</html>
