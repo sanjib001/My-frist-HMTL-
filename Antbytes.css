@@ -8,16 +8,45 @@
     box-sizing: border-box;
 }
 
+
 html {
     font-size: 6px;
 }
 
 body {
     font-family: "Manrope", sans-serif;
+    background-color: #F9FAFB;
 }
 
 p {
     color: #4B5769;
+}
+
+/* utilities */
+.card-transition {
+    transition: transform 500ms linear;
+}
+
+.card-transition:hover {
+    transform: translateY(-5px);
+    transition: transform 500ms linear;
+}
+
+.icon-transition {
+    transition: transform 500ms linear;
+}
+
+.card-transition:hover .icon-transition {
+    transform: scale(1.1);
+    transition: transform 500ms linear;
+}
+
+.prevent-overflow {
+    overflow: hidden;
+}
+
+img {
+    object-fit: cover;
 }
 
 /* header section  */
@@ -181,6 +210,7 @@ main {
 }
 
 .feauture-wrapper {
+    background-color: #fff;
     padding: 16px;
     border: 1px solid #d9d9d9;
     border-radius: 25px;
@@ -218,7 +248,9 @@ main {
 }
 
 /* section services */
-.services {
+.services,
+.trusted,
+.portfolio {
     text-align: center;
     padding-top: 96px;
 }
@@ -235,16 +267,10 @@ main {
     border: 1px solid #d9d9d9;
     padding: 20px;
     border-radius: 20px;
-    transition: transform 500ms linear;
     display: flex;
     flex-direction: column;
     gap: 10px;
     line-height: 1.5;
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    transition: transform 500ms linear;
 }
 
 .service-icon {
@@ -256,12 +282,6 @@ main {
     background-color: #fff;
     border-radius: 15px;
     border: 1px solid #d9d9d9;
-    transition: transform 500ms linear;
-}
-
-.service-card:hover .service-icon {
-    transform: scale(1.1);
-    transition: transform 500ms linear;
 }
 
 .service-card h3 {
@@ -282,4 +302,63 @@ main {
 
 .service-card ul li {
     font-size: 12px;
+}
+
+/* Section trusted by  */
+.partners-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.partners-card {
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid #d9d9d9;
+}
+
+/* section protfolio */
+.portfolio-card {
+    border: 1px solid #d9d9d9;
+    border-radius: 16px;
+    background-color: #fff;
+    padding: 0 10px;
+    margin: 16px 0;
+}
+
+.portfolio-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.portfolio-desc {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.portfolio-tags {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.portfolio-tags .section-heading {
+    font-size: 12px;
+}
+
+.portfolio-bottom {
+    text-align: left;
+    padding: 24px;
+}
+
+.bts {
+    font-size: 16px;
+    width: 200px;
+}
+
+.view-center {
+    margin: 16px 0;
+    display: flex;
+    justify-content: center;
 }
