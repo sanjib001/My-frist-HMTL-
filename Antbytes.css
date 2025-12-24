@@ -70,7 +70,7 @@ header .mobile-nav {
     justify-content: space-between;
 }
 
-.mobile-nav .nav-logo {
+.nav-logo {
     display: flex;
     align-items: center;
     font-size: 3.5rem;
@@ -78,7 +78,7 @@ header .mobile-nav {
     font-weight: 600;
 }
 
-.mobile-nav .nav-logo span {
+.nav-logo span {
     font-weight: 800;
     height: 40px;
     width: 40px;
@@ -88,6 +88,28 @@ header .mobile-nav {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
+}
+
+/* Desktop nav */
+.desktop-nav {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    font-size: 16px;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #000;
+    /* position: relative; */
 }
 
 /* main section */
@@ -163,7 +185,7 @@ main {
 
 .btn {
     text-transform: capitalize;
-    font-size: 3rem;
+    font-size: 18px;
     width: 100%;
     padding: 16px 32px;
     text-align: center;
@@ -203,44 +225,44 @@ main {
 }
 
 .report-item .report-description {
-    font-size: 3rem;
+    font-size: 14px;
     color: #4B5769;
 }
 
 .hero-right {
     margin: 20px 0;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 16px;
-    /* gap: 20px; */
+    flex-direction: column;
+    gap: 20px;
 }
 
-.feauture-wrapper {
-    background-color: #fff;
+.hero-right-content {
+    display: none;
+}
+
+.feature-wrapper {
     padding: 16px;
+    border-radius: 20px;
     border: 1px solid #d9d9d9;
-    border-radius: 25px;
-    display: flex;
+    display: inline-flex;
     gap: 10px;
-    display: inline flex;
     align-items: center;
-    max-width: 155px;
+    background-color: #fff;
 }
 
-.feauture-wrapper b {
+.feature-wrapper b {
     font-size: 14px;
 }
 
-.feauture-wrapper p {
+.feature-wrapper p {
     font-size: 12px;
     color: #4B5769;
 }
 
-.feauture-wrapper .svg-wrapper {
+.feature-wrapper .svg-wrapper {
     color: #fff;
     height: 40px;
-    min-width: 28px;
+    min-width: 30px;
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -373,7 +395,7 @@ main {
 }
 
 .view-center {
-    margin: 16px 0;
+    margin: 25px 0;
     display: flex;
     justify-content: center;
 }
@@ -505,4 +527,127 @@ footer {
     .footer-item ul li {
         white-space: nowrap;
     }
+}
+
+@media screen and (min-width: 1024px) {
+    header .mobile-nav {
+        display: none;
+    }
+    
+    main,
+    footer,
+    header {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+
+    header .desktop-nav {
+        display: flex;
+    }
+
+    .hero-section {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .top-btn {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 50%;
+    }
+
+    .hero-right {
+        border: 1px solid #d9d9d9;
+        border-radius: 20px;
+        height: 90vh;
+        position: relative;
+    }
+
+    .feature-wrapper.bottom-right {
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+    }
+
+    .feature-wrapper.top-left {
+        position: absolute;
+        left: -20px;
+        top: -20px;
+    }
+
+    .btn.top-right {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        width: unset;
+        font-size: 12px;
+        border-radius: 25px;
+    }
+
+    .hero-right-content {
+        display: block;
+        position: absolute;
+        width: 30%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-right-content svg {
+        color: #D1D5DB;
+    }
+
+    .service-card:nth-child(even) {
+        flex-basis: unset;
+        width: 30%;
+    }
+
+    .service-card:nth-child(odd) {
+        flex-basis: unset;
+        width: calc(70% - 25px);
+    }
+
+    .service-card:nth-child(1) {
+        order: 4;
+    }
+
+    .service-card:nth-child(2) {
+        order: 3;
+    }
+
+    .service-card:nth-child(3) {
+        order: 2;
+    }
+
+    .service-card:nth-child(4) {
+        order: 1;
+    }
+
+    .partners-card {
+        flex-basis: calc(25% - 25px)
+    }
+
+    .footer-item {
+        flex-grow: unset;
+        flex-basis: calc(33% - 30px);
+    }
+
+    main,
+    footer,
+    header {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .buttons {
+        flex-direction: row;
+    }
+
 }
